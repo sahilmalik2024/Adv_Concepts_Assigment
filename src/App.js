@@ -1,4 +1,4 @@
-import logo from './public/logo.png';
+import logo from './public/Vanamo_Logo.png';
 import './App.css';
 
 function App() {
