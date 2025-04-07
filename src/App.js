@@ -15,12 +15,20 @@ function App() {
       .catch((err) => console.error('Error fetching data:', err));
   }, []);
 
-  
+
   return (
-    <div className="App">
+     <div className="App">
       <h1>CDN Caching Demo</h1>
       <img src={logo} alt="Logo" width="200" />
       <p>This content should be cached by a CDN.</p>
+
+      {/* Display fetched data if available */}
+      {data && (
+        <div style={{ marginTop: '20px' }}>
+          <h2>Data from {data.source}</h2>
+          <pre>{JSON.stringify(data.data, null, 2)}</pre>
+        </div>
+      )}
     </div>
   );
 }
